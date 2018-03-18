@@ -1,6 +1,6 @@
-# LC4 AKA Logic Chain 4 
+# LC4 AKA Logic Chain 4
 
-LC4 is miniature parser / virtual processor, capable of simple 1 bit calculations across many registers.
+LC4 is a miniature parser / virtual processor, capable of simple 1 bit calculations across many registers.
 
 **Warning**, this project is my very first with Rust and was designed based on a random idea in one of my notebooks.
 and so, lc4 serves no real purpose other than for learning and fun.
@@ -39,7 +39,7 @@ Below is a simple example where we've specified an instruction sequence that doe
 - flip the third and fourth registers
 ```
 INT: [0,0,0,0] # The initial register values.
-INS: [1,-,+,+] # The instruction senescence that was entered.
+INS: [1,-,+,+] # The instruction sequence that was entered.
 REG: [1,0,1,1] # The new state of the registers.
 INS:
 ```
@@ -59,7 +59,7 @@ Where each `-` can be replaced with either a literal or operator
 
 `0` set the current register to 0
 
-`-` no-op 
+`-` no-op
 
 `+` flip the current register
 
@@ -85,7 +85,7 @@ INT: [0,0,0,0]
 INS: [1,0,1,0] # This is where we set our input before running our program
 REG: [1,0,1,0]
 INS: [-,+,-,-] > [&,&,&,-] > [-,+,-,=] # Our program
-REG: [1,0,1,1] # The result, as expect the fourth register is 1 because both the first and third registers were 1 and the second was 0 
+REG: [1,0,1,1] # The result, as expect the fourth register is 1 because both the first and third registers were 1 and the second was 0
 INS:
 ```
 Let's run the program again with different starting values
